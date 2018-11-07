@@ -45,14 +45,101 @@
   background: url(../images/vmail/icon1.png) no-repeat;
   background-position: 0 -385px;
 }
-#huawei #header {
-  height: 100px;
-  background: yellow;
-}
+
 #huawei #banner {
-  height: 450px;
-  background: green;
+  min-width: 1200px;
 }
+
+#banner .ec-slider{
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+#banner .ec-slider>ul.ec-slider-img>li{
+  width: 100%;
+  display: block;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 450px;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(1){
+  background-image: url(../images/banner/1.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(2){
+  background-image: url(../images/banner/2.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(3){
+  background-image: url(../images/banner/3.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(4){
+  background-image: url(../images/banner/4.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(5){
+  background-image: url(../images/banner/5.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(6){
+  background-image: url(../images/banner/6.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(7){
+  background-image: url(../images/banner/7.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(8){
+  background-image: url(../images/banner/8.jpg);
+}
+
+#banner .ec-slider>ul.ec-slider-img>li:nth-child(9){
+  background-image: url(../images/banner/9.jpg);
+}
+
+
+#banner .ec-slider>ul>li>div{
+  margin: 0 auto;
+  text-align: right;
+  width: 100%;
+}
+
+#banner .ec-slider .ec-slider-nav-1 {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 300px;
+  margin-left: -150px;
+  height: 10px;
+}
+
+.ec-slider .ec-slider-nav-1 li{
+  float: left;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: default;
+  background: transparent;
+}
+
+.ec-slider .ec-slider-nav-1 li.current{
+  background: white;
+}
+
+
+
+
+
+
 #huawei .home-channel-menu {
   background: #f5f5f5;
   overflow: hidden;
