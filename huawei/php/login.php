@@ -18,7 +18,7 @@
 
     if($row){
         if($row["upwd"] == $psd){
-            echo 1;//成功
+            echo $name;//成功
         }else{
             echo 2;//密码错误
         }

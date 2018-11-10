@@ -1,10 +1,9 @@
 define(function () {
     return {
-        add: function () {
-            document.cookie = "";
+        add: function (cssHref, phpSrc) { //传入css相对路径
             if (!$("body>#login").size()) { //如果页面没有加载过登录块
                 //添加样式表到页面头部
-                $("<link rel='stylesheet' href='css/login.css'>").appendTo("head")
+                $("<link rel='stylesheet' href='" + cssHref + "'>").appendTo("head")
                 $("<div id='filter'></div>").appendTo("body");//添加遮罩层到页面
                 //添加登录块
                 $(`<div id="login">
@@ -81,7 +80,7 @@ define(function () {
                 } else if (!uPwdReg.test(userPsw)) {
                     checkInfo.css({ "color": "#840707", fontWeight: 600 }).html("密码不正确,请重新输入!");
                 } else { //格式OK则发到服务端判断
-                    $.post("php/login.php", { "userName": userName, "userPsw": userPsw }, function (res) {
+                    $.post(phpSrc, { "userName": userName, "userPsw": userPsw }, function (res) {
                         if (res == "0") {//用户名不存在
                             checkInfo.css({ "color": "#840707", fontWeight: 600 }).html("用户名不存在,请重新输入!");
                         } else if (res == "2") {//密码错误
@@ -89,16 +88,16 @@ define(function () {
                         } else {//登录成功
                             loginClose.click();
 
-                            //XXX欢迎登陆
-
                             //将用户信息存储到本地
+                            localStorage.setItem("HWuName", res);
+
+                            //XXX欢迎登陆
+                            $(".s-main>ul>li").eq(0).remove();
+                            $(".s-main>ul>li").eq(0).remove();
+                            $("<li><a href='#'>" + res + ",欢迎您！</a></li>").prependTo(".s-main>ul")
                         }
                     })
                 }
-
-
-
-
             });
         }
     };
