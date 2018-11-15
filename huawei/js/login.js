@@ -1,5 +1,6 @@
 define(function () {
     return {
+        //加载登录模块
         add: function (cssHref, phpSrc) { //传入css相对路径
             if (!$("body>#login").size()) { //如果页面没有加载过登录块
                 //添加样式表到页面头部
@@ -86,17 +87,33 @@ define(function () {
                         } else if (res == "2") {//密码错误
                             checkInfo.css({ "color": "#840707", fontWeight: 600 }).html("密码错误,请重新输入!");
                         } else {//登录成功
-                            loginClose.click();
-
                             //将用户信息存储到本地
                             localStorage.setItem("HWuName", res);
 
-                            //XXX欢迎登陆
-                            $(".s-main>ul>li").eq(0).remove();
-                            $(".s-main>ul>li").eq(0).remove();
-                            $("<li><a href='#'>" + res + ",欢迎您！</a></li>").prependTo(".s-main>ul")
+                            //刷新页面
+                            location.reload();
+                            // loginClose.click();
+                            // //XXX欢迎登陆
+                            // $(".s-main>ul>li").eq(0).remove();
+                            // $(".s-main>ul>li").eq(0).remove();
+                            // $("<li><a href='#'>" + res + ",欢迎您！</a></li>").prependTo(".s-main>ul")
                         }
                     })
+                }
+            });
+        },
+
+        //如果已经登录了，页面进行初始化
+        hasLoginInit: function (uName, sc) {
+            $(".s-main>ul>li").eq(0).remove();
+            $(".s-main>ul>li").eq(0).remove();
+            $("<li><a href='#'>" + uName + ",欢迎您！</a></li><li><a href='#' class='exitLogin'>退出登录</a></li>").prependTo(".s-main>ul");
+            $(".s-main>ul>li>a.shopCart").html("购物车(" + sc.getTotalNum(uName) + ")");
+            $(".exitLogin").click(function () {//退出登录
+                var cof = confirm("您确定要退出登录吗?");
+                if (cof) {
+                    sc.exitLog();
+                    location.reload();
                 }
             });
         }

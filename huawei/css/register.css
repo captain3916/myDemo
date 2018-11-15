@@ -80,11 +80,10 @@
 #reg{
 	width: 750px;
 	height: 450px;
-	/* border: 1px solid #ccc; */
 	position:absolute;
 	left: 30px;
-	top: 30px;
-	padding-left: 150px;
+	top: 40px;
+	padding-left: 190px;
 	z-index: 9999;
 	font-size: 12px;
 }
@@ -133,7 +132,7 @@
 #reg dl dd input.submit{
 	width: 143px;
 	height: 33px;
-	background: url(img/reg.png) no-repeat left;
+	background: url(../images/register/reg.png) no-repeat left;
 	border: none;
 	cursor: pointer;
 }
@@ -151,13 +150,13 @@
 	display: none;
 }
 #reg dl dd span.info{
-	background: url(img/reg_info.png) no-repeat;
+	background: url(../images/register/reg_info.png) no-repeat;
 }
 #reg dl dd span.error{
-	background: url(img/reg_error.png) no-repeat;
+	background: url(../images/register/reg_error.png) no-repeat;
 }
 #reg dl dd span.succ{
-	background: url(img/reg_succ.png) no-repeat 3px center;
+	background: url(../images/register/reg_succ.png) no-repeat 3px center;
 	padding: 0 0 0 20px;
 	color: green;
 }
@@ -166,24 +165,24 @@
 	top: 10px;
 	left: 300px;
 	font-size: 12px;
-	background: url(img/loading2.png) no-repeat 0 center;
+	background: url(../images/register/loading2.png) no-repeat 0 center;
 	text-indent: 22px;
 	display: none;
 }
 #reg dl dd span.info_user{
 	height: 43px;
 	line-height: 18px;
-	background: url(img/reg_info2.png) no-repeat;
+	background: url(../images/register/reg_info2.png) no-repeat;
 	padding-top: 7px;
-	top: 3px;
+	top: 6px;
 	left: 288px;
 }
 #reg dl dd span.error_user{
-	top: 3px;
+	top: 7px;
 	left: 288px;
 }
 #reg dl dd span.succ_user{
-	top: 0px;
+	top: 6px;
 	left: 288px;
 }
 /*密码验证*/
@@ -199,30 +198,53 @@
 	width: 260px;
 	height: 104px;
 	padding-top: 2px;
-	background: #fff url(img/reg_info3.png) no-repeat;
-	top: 3px;
+	background: #fff url(../images/register/reg_info3.png) no-repeat;
+	top: 25px;
 	left: 288px;
 }
 #reg dl dd span.error_pass{
-	top: 43px;
+	top: 58px;
 	left: 288px;
 }
 #reg dl dd span.succ_pass{
-	top: 43px;
+	top: 57px;
 	left: 288px;
 }
 /*重新输入密码	*/
 #reg dl dd span.info_notpass{
-	top: 83px;
+	top: 108px;
 	left: 288px;
 }
 #reg dl dd span.error_notpass{
-	top: 83px;
+	top: 108px;
 	left: 288px;
 }
 #reg dl dd span.succ_notpass{
-	top: 83px;
+	top: 107px;
 	left: 288px;
+}
+
+/*验证码*/
+#verification{
+	vertical-align: middle;
+}
+
+#verifi_num{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 20px;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 4px;
+	line-height: 30px;
+	font-style: italic;
+	-webkit-text-stroke: 1px #fff;
+	color: black;
+	background: #b40707;
+	font-weight: 600;
+	cursor: pointer;
 }
 
 /*生日*/
@@ -234,25 +256,25 @@
 
 /*电子邮箱*/
 #reg dl dd span.info_email{
-	top: 203px;
+	top: 207px;
 	left: 288px;
 }
 #reg dl dd span.error_email{
-	top: 203px;
+	top: 207px;
 	left: 288px;
 }
 #reg dl dd span.succ_email{
-	top: 203px;
+	top: 207px;
 	left: 288px;
 }
 #reg dl dd ul.all_email{
-	width: 182px;
+	width: 180px;
 	height: 180px;
 	padding: 5px 10px;
 	background: #fff;
 	position: absolute;
-	top: 228px;
-	left: 80px;
+	top: 236px;
+	left: 84px;
 	border: 1px solid #ccc;
 	font-size: 12px;
 	display: none;

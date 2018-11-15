@@ -1,8 +1,6 @@
 <?php
     header("content-type:text/html;charset=utf-8");
-
-    $name = $_POST["userName"];
-    $psd = $_POST["userPsw"];
+    $name = $_POST["name"];
 
     $db = mysqli_connect("localhost","root","");
 
@@ -17,13 +15,8 @@
     $row = mysqli_fetch_array($result);
 
     if($row){
-        if($row["upwd"] == $psd){
-            echo $name;//成功
-        }else{
-            echo 2;//密码错误
-        }
+        echo 0;//用户名存在，需要更换用户名
     }else{
-        echo 0;//用户名不存在
+        echo 1;//用户名不存在,可以注册
     }
-
 ?>

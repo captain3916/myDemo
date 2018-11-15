@@ -249,6 +249,22 @@
     cursor: pointer;
 }
 
+.product #pro-buy:hover{
+    background: #fd803d;
+}
+
+.moveImg{
+    width: 66px;
+    height: 66px;
+    border: 1px solid #ca141d;
+    position: absolute;
+}
+
+.moveImg img{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 

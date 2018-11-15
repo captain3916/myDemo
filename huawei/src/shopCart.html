@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>商品详情</title>
+    <title>我的购物车</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/shopCart.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/index_footer.css">
-    <script src="../js/require.js" data-main="../js/product.js"></script>
+    <script src="../js/require.js" data-main="../js/shopCart.js"></script>
 </head>
 
 <body>
-    <div id="product">
+    <div id="shopCart">
         <div class="shortcut">
             <div class="container clearfix">
                 <div class="s-sub">
@@ -33,7 +33,7 @@
                     <ul>
                         <li><a href="#" class="login">请登录</a></li>
                         <li><a href="userRegister.html" class="rigest">注册</a></li>
-                        <li><a href="shopCart.html" class="shopCart">购物车(0)</a></li>
+                        <li><a href="#" class="shopCart">购物车(0)</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,77 +46,92 @@
                             <img src="../images/vmail/logo20170801113951.png" alt="Vmall.com - 华为商城">
                         </a>
                     </h1>
-                    <div class="naver fl">
-                        <ul id="naver-list">
-                            <li><a href="#">11.11狂欢</a></li>
-                            <li><a href="#">华为</a></li>
-                            <li><a href="#">荣耀</a></li>
-                            <li><a href="#">Mate 20系列</a></li>
-                            <li><a href="#">荣耀10</a></li>
-                            <li><a href="#">P20系列</a></li>
-                            <li><a href="#">荣耀V10</a></li>
-                        </ul>
-                    </div>
+                    <span>我的购物车</span>
                 </div>
-                <div class="searchBox fr">
-                    <div class="search-bar-form">
-                        <form method="get">
-                            <input type="text" id="search-kw">
-                            <input type="button">
-                        </form>
-                    </div>
-                    <div class="search-bar-key">
-                        <a href="#">HUAWEI Mate 20</a>
-                        <a href="#">荣耀Magic2</a>
-                    </div>
+                <div class="progress-area fr">
+                    <div></div>
                 </div>
             </div>
         </div>
         <div class="h5"></div>
         <div id="main">
-            <div class="h20"></div>
-            <div class="container product">
-                <div class="fl relative">
-                    <div class="pro-area">
-                        <img id="small-img" src="../images/pro/800_800_a_web1541563279818.png">
-                        <div id="small-area"></div>
+            <div class="container">
+                <!-- 未登录则弹出此模块 -->
+                <!-- <div class="login-prompt">
+                    您还没有登录！登录后可查看之前加入的商品
+                    <a href="#" class="login">登录</a>
+                </div> -->
+                <!-- 购物车商品清单 -->
+                <div class="sc-list">
+                    <!-- 标题 -->
+                    <div class="sc-pro-title clearfix">
+                        <label class="checkbox">
+                            <input class="vam" readonly="readonly">
+                            全选
+                        </label>
+                        <ul class="clearfix fl">
+                            <li>商品</li>
+                            <li>单价</li>
+                            <li>数量</li>
+                            <li>小计</li>
+                            <li>操作</li>
+                        </ul>
                     </div>
-                    <div id="big-area">
-                        <img id="big-img" src="../images/pro/800_800_a_web1541563279818.png">
-                    </div>
-                    <div class="pro-nav">
-                        <button id="pro-prev"></button>
-                        <div>
-                            <ul id="pro-items">
-                                <!-- <li class="current">
-                                    <img src="../images/pro/78_78_a_web1541563279818.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="../images/pro/78_78_1535358140458.jpg" alt="">
-                                </li> -->
-                            </ul>
+                    <!-- 购物车产品 -->
+                    <!-- <div class="sc-pro">
+                        <div class="sc-pro-list clearfix">
+                            <label class="checkbox">
+                                <input class="vam" readonly="readonly">
+                            </label>
+                            <div class="sc-pro-main clearfix">
+                                <a href="product.html#" class="p-img">
+                                    <img src="../images/shopCart/428_428_1541564133685mp.png" alt="">
+                                </a>
+                                <ul>
+                                    <li>荣耀9i 全网通 4GB+64GB（魅海蓝）</li>
+                                    <li class="p-price">￥ 1199.00</li>
+                                    <li>
+                                        <div class="p-num">
+                                            <input type="text" class="p-num-text" value="1">
+                                            <p class="p-num-btn">
+                                                <button class="pro-add">+</button>
+                                                <button class="pro-reduce">-</button>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="p-price-total">￥ 1199.00</li>
+                                    <li class="p-del">
+                                        <button>删除</button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <button id="pro-next"></button>
+                    </div> -->
+
+                    <!-- 购物车结算栏 -->
+                    <div class="sc-total-tool clearfix">
+                        <div class="sc-total-control">
+                            <label class="checkbox">
+                                <input class="vam" readonly="readonly">
+                                全选
+                            </label>
+                            <button>删除</button>
+                        </div>
+                        <div class="sc-total-btn">立即结算</div>
+                        <div class="sc-total-price">
+                            <p>
+                                <label>总计：</label>
+                                <span>￥ 0.00</span>
+                            </p>
+                            <div class="total-choose">
+                                已选择<em>0</em>件商品。
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="fr relative">
-                    <h2 id="pro-name">荣耀10</h2>
-                    <p>送双倍积分（积分可抵现），现货速发, 麒麟970AI芯片|GPU Turbo|手持超级夜景</p>
-                    <p id="pro-price">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格<b>￥2299.00</b></p>
-                    <p id="pro-id">商品编码<span>2601010038103</span></p>
-                    <p>服务说明<span>已满48元已免运费,由华为商城负责发货,并提供售后服务</span></p>
-                    <div></div>
-                    <div class="pro-count-area">
-                        数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量
-                        <input type="text" id="pro-count" placeholder="1" value="1">
-                        <p>
-                            <button id="addCount">+</button>
-                            <button id="reduceCount">-</button>
-                        </p>
-                    </div>
-                    <button id="pro-buy">加入购物车</button>
                 </div>
             </div>
+
             <div class="h20"></div>
         </div>
         <div class="slogan-container">
